@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike - Just Do It</title>
+  </head>
+  <body>
+    <main class="relative dark:bg-gray-800">
+      <!-- Back to top btn -->
+      <a
+        id="back-to-top"
+        href="#home"
+        class="fixed bottom-2 right-2 z-50 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-coral-red text-white shadow-2xl lg:bottom-4 lg:right-4 lg:h-10 lg:w-10"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="h-6 w-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+          />
+        </svg>
+      </a>
+      <!-- Header -->
+      <header class="absolute z-10 w-full px-4 py-8">
+        <!-- Nav -->
+        <nav class="container mx-auto flex items-center justify-between">
+          <!-- Nike Logo -->
+          <a href="/">
+            <img
+              src="assets/images/header-logo.svg"
+              alt="nike logo"
+              class="h-[20px] w-[90px] md:h-[29px] md:w-[120px]"
+            />
+          </a>
+          <!-- Nav Links -->
+          <ul
+            class="flex flex-1 items-center justify-center gap-8 max-md:hidden lg:gap-16"
+          >
+            <li>
+              <a
+                href="#home"
+                class="font-montserrat text-sm text-slate-gray hover:text-coral-red dark:text-coral-red dark:hover:text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about-us"
+                class="font-montserrat text-sm text-slate-gray hover:text-coral-red dark:text-coral-red dark:hover:text-gray-500"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#products"
+                class="font-montserrat text-sm text-slate-gray hover:text-coral-red dark:text-coral-red dark:hover:text-gray-800"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact-us"
+                class="font-montserrat text-sm text-slate-gray hover:text-coral-red dark:text-coral-red dark:hover:text-gray-800"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <div class="flex items-center">
+            <!-- Repo Button -->
+            <li class="mr-8 mt-2 list-none">
+              <a
+                class="github-button"
+                href="https://github.com/SHVM-09/tailwind-with-vite"
+                data-icon="octicon-star"
+                data-size="small"
+                data-show-count="true"
+                aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
+                >Star</a
+              >
+            </li>
+            <!-- Style Switcher -->
+            <div
+              class="mr-6 flex gap-2 rounded-full border border-coral-red bg-white p-1 dark:bg-gray-800"
+            >
+              <div
+                id="light-mode-toggle"
+                class="rounded-full bg-coral-red p-1 text-white transition-all duration-300 ease-in-out dark:bg-gray-800 dark:text-coral-red"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  />
+                </svg>
+              </div>
+              <div
+                id="dark-mode-toggle"
+                class="rounded-full bg-white p-1 text-coral-red transition-all duration-300 ease-in-out dark:bg-coral-red dark:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- Menu -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              id="hamburger-icon"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="hidden h-8 w-8 text-coral-red hover:text-gray-800 max-md:block dark:hover:text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+        </nav>
+        <!-- Ham - Menu -->
+        <div id="menu-ham" class="container relative mx-auto hidden md:hidden">
+          <div class="absolute right-0 top-2">
+            <ul
+              class="w-40 space-y-4 rounded-md border-2 border-coral-red bg-white py-6 dark:bg-gray-800"
+            >
+              <li class="group text-center hover:bg-coral-red">
+                <a
+                  href="#home"
+                  class="text-md font-montserrat leading-normal text-slate-gray group-hover:text-white dark:text-gray-300"
+                  >Home</a
+                >
+              </li>
+              <li class="group text-center hover:bg-coral-red">
+                <a
+                  href="#about-us"
+                  class="text-md font-montserrat leading-normal text-slate-gray group-hover:text-white dark:text-gray-300"
+                  >About Us</a
+                >
+              </li>
+              <li class="group text-center hover:bg-coral-red">
+                <a
+                  href="#products"
+                  class="text-md font-montserrat leading-normal text-slate-gray group-hover:text-white dark:text-gray-300"
+                  >Products</a
+                >
+              </li>
+              <li class="group text-center hover:bg-coral-red">
+                <a
+                  href="#contact-us"
+                  class="text-md font-montserrat leading-normal text-slate-gray group-hover:text-white dark:text-gray-300"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- Home -->
+      <section class="xl:padding-l wide:padding-r padding-b">
+        <section
+          id="home"
+          class="container mx-auto flex min-h-screen w-full flex-col justify-center gap-10 xl:flex-row"
+        >
+          <!-- Hero Section -->
+          <div
+            class="relative flex w-full flex-col items-start justify-center pt-28 max-xl:px-4 xl:w-2/5"
+          >
+            <!-- Intro -->
+            <p
+              class="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text font-palanquin text-xl text-transparent"
+            >
+              Our Summer Collection
+            </p>
+            <h1
+              class="mt-6 font-palanquin text-8xl font-bold max-sm:text-[62px] max-sm:leading-[82px] md:mt-10 dark:text-gray-300"
+            >
+              <span
+                class="z-10 rounded-r-full pr-10 font-palanquin text-gray-900 xl:relative xl:whitespace-nowrap xl:bg-white dark:text-gray-400 dark:xl:bg-gray-800"
+                >The New Arrival</span
+              >
+              <br />
+              <span
+                class="inline-block animate-pulse bg-gradient-to-r from-coral-red to-pink-400 bg-clip-text text-transparent md:mt-3"
+                >Nike&nbsp;</span
+              >Shoes
+              <p
+                class="mb-14 mt-6 text-lg font-medium leading-8 text-slate-gray sm:max-w-sm dark:text-gray-200"
+              >
+                Discover stylish Nike arrivals, quality comfort, and innovation
+                for your active life
+              </p>
+            </h1>
+            <!-- Button -->
+            <button
+              class="flex items-center justify-center gap-2 rounded-full border border-coral-red bg-coral-red px-7 py-4 font-montserrat text-lg leading-none text-white transition-all duration-300 ease-in-out hover:border-coral-red hover:bg-white hover:text-coral-red"
+            >
+              Shop now
+              <img
+                src="assets/icons/arrow-right.svg"
+                alt="arrow-right-icon"
+                class="ml-2 h-5 w-5 rounded-full"
+              />
+            </button>
+            <!-- Responsive Line -->
+            <div
+              class="mt-20 w-full border-b-2 border-coral-red md:border-b-0"
+            ></div>
+            <!-- Responsive Stats -->
+            <div
+              class="mt-20 flex w-full flex-col items-center justify-center gap-16 md:flex-row md:items-start md:justify-start"
+            >
+              <div>
+                <p class="font-palanquin text-4xl font-bold dark:text-gray-400">
+                  1k+
+                </p>
+                <p
+                  class="text-center font-montserrat leading-7 text-slate-gray dark:text-gray-200"
+                >
+                  Brands
+                </p>
+              </div>
+              <div>
+                <p class="font-palanquin text-4xl font-bold dark:text-gray-400">
+                  500+
+                </p>
+                <p
+                  class="text-center font-montserrat leading-7 text-slate-gray dark:text-gray-200"
+                >
+                  Shops
+                </p>
+              </div>
+              <div>
+                <p class="font-palanquin text-4xl font-bold dark:text-gray-400">
+                  250k+
+                </p>
+                <p
+                  class="text-center font-montserrat leading-7 text-slate-gray dark:text-gray-200"
+                >
+                  Customers
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Hero Image -->
+          <div
+            class="relative flex flex-1 items-center justify-center rounded-b-xl bg-primary bg-hero bg-cover bg-center max-xl:py-40 xl:min-h-screen"
+          >
+            <!-- Big Shoe -->
+            <img
+              src="assets/images/big-shoe1.png"
+              alt="big shoe"
+              id="shoe-img"
+              width="610"
+              height="500"
+              class="relative z-10 object-contain"
+            />
+            <!-- Small Shoes -->
+            <div
+              class="absolute -bottom-[5%] flex gap-4 max-sm:px-6 sm:left-[10%] sm:gap-6"
+            >
+              <div
+                class="cursor-pointer rounded-xl border-2 border-transparent max-sm:flex-1"
+              >
+                <div
+                  class="flex items-center justify-center rounded-xl bg-card bg-cover bg-center drop-shadow-lg max-sm:p-4 sm:h-40 sm:w-40"
+                >
+                  <img
+                    src="assets/images/big-shoe1.png"
+                    alt="small shoe"
+                    id="shoe-1"
+                    height="127"
+                    width="103"
+                    class="object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="cursor-pointer rounded-xl border-2 border-transparent max-sm:flex-1"
+              >
+                <div
+                  class="flex items-center justify-center rounded-xl bg-card bg-cover bg-center drop-shadow-lg max-sm:p-4 sm:h-40 sm:w-40"
+                >
+                  <img
+                    src="assets/images/big-shoe2.png"
+                    alt="small shoe"
+                    id="shoe-2"
+                    height="127"
+                    width="103"
+                    class="object-contain"
+                  />
+                </div>
+              </div>
+              <div
+                class="cursor-pointer rounded-xl border-2 border-transparent max-sm:flex-1"
+              >
+                <div
+                  class="flex items-center justify-center rounded-xl bg-card bg-cover bg-center drop-shadow-lg max-sm:p-4 sm:h-40 sm:w-40"
+                >
+                  <img
+                    src="assets/images/big-shoe3.png"
+                    alt="small shoe"
+                    id="shoe-3"
+                    height="127"
+                    width="103"
+                    class="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Products -->
+      <section class="container mx-auto mt-32 md:mt-52">
+        <section id="products" class="px-4 max-sm:mt-12">
+          <div class="flex flex-col justify-start gap-5 max-lg:px-10">
+            <h2 class="font-palanquin text-4xl font-bold dark:text-gray-400">
+              Our <span class="text-coral-red">Popular Products</span>
+            </h2>
+            <p
+              class="mt-2 font-montserrat text-slate-gray lg:max-w-lg dark:text-gray-200"
+            >
+              Experience top-notch quality and style with our sought-after
+              selections. Discover a world of comfort, design, and value
+            </p>
+          </div>
+          <!-- Product Cards -->
+          <div
+            class="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4"
+          >
+            <!-- Card 1 -->
+            <div
+              class="flex w-full flex-1 flex-col max-lg:text-center max-sm:w-full"
+            >
+              <img
+                src="assets/images/shoe4.svg"
+                alt="4-shoe"
+                class="h-[280px] w-[280px] max-lg:mx-auto"
+              />
+              <div
+                class="mt-8 flex justify-start gap-2.5 max-lg:mx-auto max-lg:text-center"
+              >
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  class="h-[24] w-[24] max-lg:mx-auto"
+                />
+                <p
+                  class="font-montserrat text-xl leading-normal text-slate-gray max-lg:mx-auto dark:text-gray-400"
+                >
+                  (4.5)
+                </p>
+              </div>
+              <h3
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal dark:text-gray-200"
+              >
+                Nike Air Jordan-01
+              </h3>
+              <p
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal text-coral-red"
+              >
+                $200.20
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="flex w-full flex-1 flex-col max-lg:text-center max-sm:w-full"
+            >
+              <img
+                src="assets/images/shoe5.svg"
+                alt="4-shoe"
+                class="h-[280px] w-[280px] max-lg:mx-auto"
+              />
+              <div
+                class="mt-8 flex justify-start gap-2.5 max-lg:mx-auto max-lg:text-center"
+              >
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  class="h-[24] w-[24] max-lg:mx-auto"
+                />
+                <p
+                  class="font-montserrat text-xl leading-normal text-slate-gray max-lg:mx-auto dark:text-gray-400"
+                >
+                  (4.7)
+                </p>
+              </div>
+              <h3
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal dark:text-gray-200"
+              >
+                Nike Air Jordan-10
+              </h3>
+              <p
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal text-coral-red"
+              >
+                $250.20
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="flex w-full flex-1 flex-col max-lg:text-center max-sm:w-full"
+            >
+              <img
+                src="assets/images/shoe6.svg"
+                alt="4-shoe"
+                class="h-[280px] w-[280px] max-lg:mx-auto"
+              />
+              <div
+                class="mt-8 flex justify-start gap-2.5 max-lg:mx-auto max-lg:text-center"
+              >
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  class="h-[24] w-[24] max-lg:mx-auto"
+                />
+                <p
+                  class="font-montserrat text-xl leading-normal text-slate-gray max-lg:mx-auto dark:text-gray-400"
+                >
+                  (4.8)
+                </p>
+              </div>
+              <h3
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal dark:text-gray-200"
+              >
+                Nike Air Jordan-100
+              </h3>
+              <p
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal text-coral-red"
+              >
+                $270.20
+              </p>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="flex w-full flex-1 flex-col max-lg:text-center max-sm:w-full"
+            >
+              <img
+                src="assets/images/shoe7.svg"
+                alt="4-shoe"
+                class="h-[280px] w-[280px] max-lg:mx-auto"
+              />
+              <div
+                class="mt-8 flex justify-start gap-2.5 max-lg:mx-auto max-lg:text-center"
+              >
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  class="h-[24] w-[24] max-lg:mx-auto"
+                />
+                <p
+                  class="font-montserrat text-xl leading-normal text-slate-gray max-lg:mx-auto dark:text-gray-400"
+                >
+                  (4.9)
+                </p>
+              </div>
+              <h3
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal dark:text-gray-200"
+              >
+                Nike Air Jordan-X1
+              </h3>
+              <p
+                class="mt-2 font-montserrat text-2xl font-medium leading-normal text-coral-red"
+              >
+                $290.20
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- About Us -->
+      <section class="container mx-auto mt-16 md:mt-32">
+        <section
+          id="about-us"
+          class="flex w-full items-center justify-between gap-10 max-lg:flex-col max-lg:px-16"
+        >
+          <!-- Super Quality -->
+          <div class="flex flex-1 flex-col">
+            <h2
+              class="font-palanquin text-4xl font-bold capitalize max-sm:text-2xl lg:max-w-lg dark:text-gray-400"
+            >
+              We provide you
+              <span class="text-coral-red">super</span>
+              <span class="text-coral-red">quality</span>&nbsp;Shoes
+            </h2>
+            <p class="mt-4 text-slate-gray lg:max-w-lg dark:text-gray-300">
+              Ensuring premium comfort and style, our meticulously crafted
+              footwear is designed to elevate your experience, providing you
+              with unmatched quality,superior support and durability,innovation,
+              and a touch of elegance.
+            </p>
+            <p class="mt-6 text-slate-gray lg:max-w-lg dark:text-gray-300">
+              Our dedication to detail and excellence ensures your satisfaction
+            </p>
+            <div class="mt-11">
+              <!-- Button -->
+              <button
+                class="flex items-center justify-center gap-2 rounded-full border border-coral-red bg-coral-red px-7 py-4 font-montserrat text-lg leading-none text-white transition-all duration-300 ease-in-out hover:border-coral-red hover:bg-white hover:text-coral-red"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+          <!-- Shoes -->
+          <div class="flex flex-1 items-center justify-center">
+            <img
+              src="assets/images/shoe8.svg"
+              alt="shoe8"
+              width="570"
+              height="522"
+              class="animate-pulse object-contain"
+            />
+          </div>
+        </section>
+      </section>
+      <!-- Service Cards -->
+      <section
+        class="container mx-auto mt-32 flex flex-wrap justify-center gap-9 px-4"
+      >
+        <!-- S-card 1 -->
+        <div
+          class="rounded-[20px] px-10 py-16 shadow-3xl sm:w-[350px] sm:min-w-[350px] dark:bg-gray-700"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-red"
+          >
+            <img
+              src="assets/icons/truck-fast.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </div>
+          <h3
+            class="mt-5 font-palanquin text-3xl font-medium leading-normal dark:text-gray-200"
+          >
+            Free Shipping
+          </h3>
+          <p
+            class="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray dark:text-gray-400"
+          >
+            Enjoy seamless shopping with our complementary shipping service.
+          </p>
+        </div>
+        <!-- S-card 2 -->
+        <div
+          class="rounded-[20px] px-10 py-16 shadow-3xl sm:w-[350px] sm:min-w-[350px] dark:bg-gray-700"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-red"
+          >
+            <img
+              src="assets/icons/shield-tick.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </div>
+          <h3
+            class="mt-5 font-palanquin text-3xl font-medium leading-normal dark:text-gray-200"
+          >
+            Secure Payment
+          </h3>
+          <p
+            class="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray dark:text-gray-400"
+          >
+            Experience worry-free transactions with our secure payment options.
+          </p>
+        </div>
+        <!-- S-card 3 -->
+        <div
+          class="rounded-[20px] px-10 py-16 shadow-3xl sm:w-[350px] sm:min-w-[350px] dark:bg-gray-700"
+        >
+          <div
+            class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-red"
+          >
+            <img src="assets/icons/support.svg" alt="" width="24" height="24" />
+          </div>
+          <h3
+            class="mt-5 font-palanquin text-3xl font-medium leading-normal dark:text-gray-200"
+          >
+            Love to help you
+          </h3>
+          <p
+            class="mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray dark:text-gray-400"
+          >
+            Our dedication team is here to assist you every step of the way.
+          </p>
+        </div>
+      </section>
+      <!-- Special Offer -->
+      <section
+        class="justify-wrap container mx-auto mt-32 flex items-center gap-10 px-4 max-xl:flex-col-reverse"
+      >
+        <div class="flex-1">
+          <img
+            src="assets/images/offer.svg"
+            alt="offer"
+            width="773"
+            height="687"
+            class="w-full object-contain"
+          />
+        </div>
+        <div class="flex flex-1 flex-col">
+          <h2
+            class="font-palanquin text-4xl font-bold capitalize max-sm:text-2xl lg:max-w-xl dark:text-gray-400"
+          >
+            <span class="text-coral-red">Special</span>&nbsp;Offer
+          </h2>
+          <p class="mt-4 text-slate-gray lg:max-w-xl dark:text-gray-200">
+            Embark on a shopping journey that redefines your experience with
+            unbeatable deals. From premier quality to superior comfort, we have
+            it all.We offer a wide range of products to suit your needs.
+          </p>
+          <p class="mt-6 text-slate-gray lg:max-w-xl dark:text-gray-200">
+            Navigate a realm of style, comfort, and innovation with our
+            exclusive offers.Your journey to a world of comfort and style begins
+            here.
+          </p>
+          <div class="mt-11 flex flex-wrap items-center gap-4">
+            <!-- Button 1-->
+            <button
+              class="flex items-center justify-center gap-2 rounded-full border border-coral-red bg-coral-red px-7 py-4 font-montserrat text-lg leading-none text-white transition-all duration-300 ease-in-out hover:border-coral-red hover:bg-white hover:text-coral-red"
+            >
+              Shop now
+              <img
+                src="assets/icons/arrow-right.svg"
+                alt="arrow-right-icon"
+                class="ml-2 h-5 w-5 rounded-full"
+              />
+            </button>
+            <!-- Button 2-->
+            <button
+              class="flex items-center justify-center gap-2 rounded-full border border-slate-gray px-7 py-4 font-montserrat text-lg leading-none text-slate-gray transition-all duration-300 ease-in-out hover:border-black hover:bg-slate-300 hover:text-black dark:border-gray-200 dark:text-gray-200 dark:hover:border-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-800"
+            >
+              View details
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews -->
+      <section class="mt-32 bg-pale-blue py-24">
+        <section id="reviews" class="container mx-auto">
+          <h3 class="text-center font-palanquin text-4xl font-bold">
+            What Our
+            <span class="text-coral-red">Customers </span>
+            Say?
+          </h3>
+          <p class="mx-auto mt-4 max-w-lg text-center text-slate-gray">
+            Hear genuine stories from our satisfied customers about their
+            exceptional experiences with us.
+          </p>
+          <div
+            class="mt-24 flex flex-1 items-center justify-evenly gap-14 max-lg:flex-col"
+          >
+            <div class="flex flex-col items-center justify-center">
+              <img
+                src="assets/images/customer1.jpeg"
+                alt="review1"
+                width="120"
+                height="120"
+                class="rounded-full object-cover"
+              />
+              <p class="mt-6 max-w-sm text-center text-slate-gray">
+                The attention to detail and the quality of the product exceeded
+                my expectations.<br />Highly recommended!
+              </p>
+              <div class="mt-3 flex items-center justify-center gap-2.5">
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  width="24"
+                  height="24"
+                  class="m-0 object-contain"
+                />
+                <p class="font-montserrat text-xl text-slate-400">(4.5)</p>
+              </div>
+              <h3 class="mt-4 text-center font-palanquin text-2xl font-bold">
+                Morich Brown
+              </h3>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+              <img
+                src="assets/images/customer2.svg"
+                alt="review1"
+                width="120"
+                height="120"
+                class="rounded-full object-cover"
+              />
+              <p class="mt-6 max-w-sm text-center text-slate-gray">
+                The product not only met my expectations but exceeded them. I'll
+                definitely be a returning customer!
+              </p>
+              <div class="mt-3 flex items-center justify-center gap-2.5">
+                <img
+                  src="assets/icons/star.svg"
+                  alt="star"
+                  width="24"
+                  height="24"
+                  class="m-0 object-contain"
+                />
+                <p class="font-montserrat text-xl text-slate-400">(4.8)</p>
+              </div>
+              <h3 class="mt-4 text-center font-palanquin text-2xl font-bold">
+                Daisy Eulrich
+              </h3>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Newsletter -->
+      <section class="w-full px-4 py-16 sm:py-32">
+        <section
+          class="container mx-auto flex items-center justify-between gap-10 max-lg:flex-col"
+          id="contact-us"
+        >
+          <h3
+            class="font-palanquin text-4xl font-bold leading-[68px] lg:max-w-lg dark:text-gray-400"
+          >
+            Sign Up for <span class="text-coral-red">Updates</span> & Newsletter
+          </h3>
+          <!-- <form action="https://formspree.io/f/meqyqpdn" method="POST"> -->
+          <form
+            class="flex w-full items-center justify-between rounded-full border border-slate-gray p-1.5 sm:p-2.5 lg:max-w-[40%]"
+            action="https://formspree.io/f/meqyqpdn"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="subscribe@nike.com"
+              class="ms-4 focus:outline-none dark:bg-gray-800"
+              required
+            />
+
+            <div class="flex items-center max-sm:justify-end">
+              <button
+                type="submit"
+                class="flex items-center justify-center gap-2 rounded-full border border-coral-red bg-coral-red px-4 py-2 font-montserrat leading-none text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-coral-red sm:px-7 sm:py-4 sm:text-lg"
+              >
+                Sign Up
+                <img
+                  src="assets/icons/arrow-right.svg"
+                  alt="arrow-right-icon"
+                  class="ml-2 h-5 w-5 rounded-full"
+                />
+              </button>
+            </div>
+          </form>
+          <!-- </form> -->
+        </section>
+      </section>
+      <!-- Footer -->
+      <section class="bg-black px-4 py-8">
+        <footer class="container mx-auto">
+          <div
+            class="flex flex-wrap items-start justify-between gap-20 max-lg:flex-col"
+          >
+            <div class="flex flex-col items-start">
+              <a href="/"
+                ><img
+                  src="assets/images/footer-logo.svg"
+                  alt="logo"
+                  width="120"
+                  height="46"
+              /></a>
+              <p
+                class="mt-6 font-montserrat text-base leading-7 text-white-400 sm:max-w-sm"
+              >
+                Get shoes that fit your style and your budget with the latest in
+                fashion and comfort. We offer a wide range of products to suit
+                your needs.Get Rewards!
+              </p>
+              <div class="mt-8 flex items-center gap-5">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-white"
+                >
+                  <img src="assets/icons/facebook.svg" alt="fb" />
+                </div>
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-white"
+                >
+                  <img src="assets/icons/twitter.svg" alt="X" />
+                </div>
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-white"
+                >
+                  <img src="assets/icons/instagram.svg" alt="insta" />
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-wrap justify-between gap-20 lg:gap-10">
+              <div>
+                <h4
+                  class="mb-6 font-montserrat text-2xl font-medium leading-normal text-white"
+                >
+                  Products
+                </h4>
+                <ul>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Air Force 1</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Air Max 1</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Air Jordan 1</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Air Force 2</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Nike Waffle Racer</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Nike Cortez</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4
+                  class="mb-6 font-montserrat text-2xl font-medium leading-normal text-white"
+                >
+                  Help
+                </h4>
+                <ul>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">About us</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">FAQs</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">How it works</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Privacy policy</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">Payment Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4
+                  class="mb-6 font-montserrat text-2xl font-medium leading-normal text-white"
+                >
+                  Get in touch
+                </h4>
+                <ul>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">customen@nike.com</a>
+                  </li>
+                  <li
+                    class="mt-3 font-montserrat text-base leading-normal text-white-400 hover:text-slate-gray"
+                  >
+                    <a href="/">+925544554543</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-400 mt-10 flex justify-between text-xs text-white-400 max-sm:flex-col"
+          >
+            <div
+              class="justify start flex flex-1 cursor-pointer items-center gap-2 font-montserrat"
+            >
+              <p class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="35"
+                  viewBox="0 0 55 40"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1564_9511)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.7979 39.8084H11.0554V33.0141H9.60444L7.37971 35.9806L5.2517 33.0141H3.80078V39.8084H5.05824V34.8323L7.28298 37.7988H7.47643L9.7979 34.928V39.8084ZM46.1675 33.0141H44.6199L47.2315 37.0333V39.8084H48.489V37.0333L51.2941 33.0141H49.7464L47.9086 35.7893L46.1675 33.0141ZM44.4264 39.7127L42.3951 37.4161C43.6526 37.129 44.1362 36.172 44.1362 35.2151C44.1362 34.0668 43.2657 33.0141 41.6213 33.0141C40.5573 33.0141 39.3966 33.0141 38.3326 33.0141V39.8084H39.6868V37.5117H40.9442L42.8788 39.8084H44.4264V39.7127ZM41.6213 34.1625C42.3951 34.1625 42.782 34.7366 42.782 35.3108C42.782 35.885 42.4919 36.3634 41.6213 36.3634H39.6868V34.1625H41.6213ZM37.3653 38.5644H33.4962V37.0333H37.1718V35.7893H33.4962V34.2582H37.3653V33.0141H32.142C32.142 35.3108 32.142 37.5117 32.142 39.8084H37.3653V38.5644ZM27.886 39.8084H29.2402V34.1625H31.3682V33.0141C29.4336 33.0141 27.6925 33.0141 25.758 33.0141V34.1625H27.886V39.8084ZM24.8874 34.1625C24.4038 33.1098 23.3398 32.8228 22.179 32.8228C20.9216 32.8228 19.5674 33.3969 19.5674 34.7366C19.5674 36.2677 20.8249 36.6505 22.2758 36.8419C23.1463 36.9376 23.8234 37.2247 23.8234 37.7988C23.8234 38.5644 23.0496 38.8515 22.2758 38.8515C21.4052 38.8515 20.6314 38.5644 20.3412 37.7988L19.2772 38.2773C19.7608 39.5213 20.8249 39.9998 22.2758 39.9998C23.8234 39.9998 25.1776 39.3299 25.1776 37.7988C25.1776 36.172 23.8234 35.7893 22.3725 35.6936C21.5019 35.5979 20.8249 35.4065 20.8249 34.8323C20.8249 34.2582 21.3085 33.8754 22.2758 33.8754C23.0496 33.8754 23.63 34.2582 23.9201 34.6409L24.8874 34.1625ZM17.7296 39.8084H19.1805L16.0852 33.0141H14.6343L11.539 39.8084H12.9899L13.5703 38.5644H17.1492L17.7296 39.8084ZM16.6656 37.3204H14.0539L15.4081 34.4495L16.6656 37.3204Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M42.9767 8.99515C41.2355 5.45448 37.5599 4.40185 33.981 4.40185C32.2399 4.40185 30.4988 4.78462 29.0479 5.35879C28.0806 6.02864 27.4035 6.6985 27.0166 7.17697C27.3068 5.93295 27.9839 5.0717 29.0479 4.49754V1.81812C24.6951 1.81812 21.5031 1.81812 17.2471 1.81812V6.31572H24.1147V16.555C24.1147 20.4784 23.1475 23.5406 18.698 23.5406C14.8289 23.5406 12.7009 21.8181 12.314 18.3731H7.38086C8.05795 24.6889 12.6042 28.0382 18.698 28.0382C21.6966 28.0382 23.1475 27.2727 24.8886 25.8373C24.5984 25.2631 24.4049 24.6889 24.3082 23.9234C24.5984 24.3062 24.9853 24.7846 25.3722 25.3588C27.3068 27.7511 30.4021 28.6124 34.0777 28.6124C35.4319 28.6124 36.6894 28.5167 37.8501 28.1339L36.109 27.0813L33.4006 25.5502V24.7846C31.1759 24.5932 29.0479 23.6363 27.9839 21.8181C28.5642 20.3827 28.9511 18.6602 28.9511 16.842C30.4988 17.4162 32.2399 17.799 34.0777 17.9904C34.5613 18.0861 35.045 18.0861 35.5286 18.1818L36.109 17.8947L38.8174 16.3636L41.5257 17.8947L43.3636 18.9473C42.2028 15.5023 38.4304 14.5454 34.4646 14.0669C31.6595 13.7798 29.338 13.2057 29.338 11.1961C29.338 9.47362 30.8857 8.1339 34.0777 8.1339C36.5926 8.1339 38.7206 9.37792 39.5912 10.7176L42.9767 8.99515Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M46.459 28.9951C48.1034 29.1865 50.0379 29.0908 51.1986 27.9425C52.2626 26.8898 52.5528 25.3587 52.5528 23.9233V19.0429C52.5528 17.1291 53.2299 15.6937 54.971 15.4066V13.6841C53.2299 13.397 52.5528 11.8659 52.5528 10.0477V5.16735C52.5528 3.73194 52.2626 2.10515 51.1986 1.14821C50.0379 -0.0958096 48.1034 -0.0958097 46.459 0.0955779V1.81807C48.6837 1.62668 49.651 2.8707 49.651 5.35874V10.0477C49.651 10.8133 49.5543 11.9616 49.8445 12.7272C50.2314 13.4927 51.1986 14.0669 52.0692 14.5453C51.1986 15.0238 50.2314 15.598 49.8445 16.3635C49.5543 17.1291 49.651 18.2774 49.651 19.0429V23.7319C49.651 26.4114 48.7804 27.2726 46.459 27.1769V28.9951Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M38.8168 14.9282L42.1055 16.8421L45.3943 18.6603V22.488V26.3158L42.1055 28.2297L38.8168 30.1435L35.4313 28.2297L32.1426 26.3158V22.488V18.6603L35.4313 16.8421L38.8168 14.9282ZM38.8168 16.3636L41.5252 17.8947L44.1368 19.4258V22.488V25.5502L41.5252 27.0813L38.8168 28.7081L36.1084 27.0813L33.4 25.5502V22.488V19.4258L36.1084 17.8947L38.8168 16.3636Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M34.9486 23.1577V24.1147H34.2715V20.8611C34.7551 20.8611 35.2388 20.8611 35.8191 20.8611C37.3668 20.8611 37.3668 23.1577 35.8191 23.1577H34.9486ZM38.4308 23.062H37.9471V24.1147H37.27V20.8611H37.3668C37.8504 20.8611 38.334 20.8611 38.8177 20.8611C39.4948 20.8611 39.9784 21.2439 39.9784 22.0094C39.9784 22.4879 39.785 22.8707 39.3013 22.9663L40.1719 24.019V24.1147H39.3981L38.4308 23.062ZM41.8162 20.8611C42.8802 20.8611 43.5573 21.5309 43.4606 22.4879C43.4606 23.4448 42.8802 24.2104 41.8162 24.2104C40.849 24.2104 40.1719 23.5405 40.1719 22.4879C40.1719 21.5309 40.849 20.8611 41.8162 20.8611ZM34.9486 21.5309V22.4879H35.8191C36.4962 22.4879 36.4962 21.5309 35.8191 21.5309H34.9486ZM37.9471 21.5309V22.3922H38.8177C39.1079 22.3922 39.3013 22.2965 39.3013 22.0094C39.3013 21.7223 39.1079 21.5309 38.8177 21.5309H37.9471ZM41.8162 21.4352C41.2359 21.4352 40.849 21.9137 40.849 22.4879C40.849 23.062 41.2359 23.5405 41.8162 23.5405C42.4933 23.5405 42.7835 23.062 42.7835 22.4879C42.7835 21.9137 42.4933 21.4352 41.8162 21.4352Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.54133 28.9951C6.89696 29.1865 5.05914 29.0908 3.80168 27.9425C2.73767 26.8898 2.44749 25.3587 2.44749 23.9233V19.0429C2.44749 17.1291 1.86712 15.6937 0.0292969 15.4066V13.6841C1.86712 13.397 2.44749 11.8659 2.44749 10.0477V5.16735C2.44749 3.73194 2.73767 2.10515 3.80168 1.14821C5.05914 -0.0958096 6.89696 -0.0958097 8.54133 0.0955779V1.81807C6.3166 1.62668 5.44605 2.8707 5.44605 5.35874V10.0477C5.44605 10.8133 5.44605 11.9616 5.15586 12.7272C4.76895 13.4927 3.80168 14.0669 2.93113 14.5453C3.80168 15.0238 4.76895 15.598 5.15586 16.3635C5.44605 17.1291 5.44605 18.2774 5.44605 19.0429V23.7319C5.44605 26.4114 6.21987 27.2726 8.54133 27.1769V28.9951Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1564_9511">
+                      <rect width="55" height="40" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <a
+                  class="ms-4"
+                  href="https://github.com/adrianhajdin/nike_landing_page"
+                  >Credits - JS Mastery</a
+                >
+              </p>
+            </div>
+            <a
+              class="cursor-pointer font-montserrat"
+              href="https://github.com/SHVM-09"
+              >Shivam Upadhyay</a
+            >
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="/main.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

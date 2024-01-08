@@ -1,0 +1,7 @@
+[build]
+
+command = "npm install && npm run build" # adjust this command based on your project setup
+
+[dev]
+
+command = "npm run dev" # adjust this command based on your project setup
